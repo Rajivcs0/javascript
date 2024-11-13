@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Food</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+select, button {
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#result {
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#food-image-container {
+    margin-top: 20px;
+}
+
+#food-image {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0095f6;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+</style>
+<body>
+
+    <div class="container">
+        <h1>Select Your Favorite Food</h1>
+
+        <!-- Dropdown menu for food selection -->
+        <select id="food-select">
+            <option value="">--Select a Food--</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Burger">Burger</option>
+            <option value="Pasta">Pasta</option>
+            <option value="Salad">Salad</option>
+        </select>
+
+        <!-- Button to submit the choice -->
+        <button id="submit-btn">Submit</button>
+
+        <!-- Display the selected food image here -->
+        <div id="food-image-container">
+            <img id="food-image" src="" alt="Food Image" style="display: none;">
+        </div>
+
+        <!-- Display the selected food name -->
+        <p id="result">Your selected food will appear here.</p>
+    </div>
+
+    <script src="food.js"></script>
+</body>
+</html>
