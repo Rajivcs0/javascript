@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+}
+
+.profile-info {
+    margin-top: 10px;
+}
+
+.username {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.followers {
+    color: #888;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.bio {
+    font-size: 0.9em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.follow-btn {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.follow-btn:hover {
+    background-color: #007bb5;
+}
+
+.follow-btn:active {
+    transform: scale(0.98);
+}
+</style>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <img class="profile-pic" src="0618d0b1-a078-4f93-8a12-74d14aa43600.jpeg" alt="Profile Picture">
+            <div class="profile-info">
+                <h2 class="username">rajiv_cs_10</h2>
+                <p class="followers">500 Followers</p>
+                <p class="bio">Photographer | Traveler | Blogger | Creating memories one click at a time</p>
+            </div>
+        </div>
+        <button id="follow-btn" class="follow-btn">Follow</button>
+    </div>
+
+    <script src="insta.js"></script>
+</body>
+</html>
